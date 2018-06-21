@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Gemini" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletAddressTextField" destination="FL3-aF-Bef" id="NOj-Xb-POD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,6 +28,9 @@
                         <constraint firstAttribute="height" constant="50" id="dCJ-EA-qFR"/>
                     </constraints>
                     <state key="normal" title="Sign In"/>
+                    <connections>
+                        <action selector="signInWallet:" destination="-1" eventType="touchUpInside" id="E5C-e6-RZV"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-aF-Bef">
                     <rect key="frame" x="37.5" y="308" width="300" height="50"/>

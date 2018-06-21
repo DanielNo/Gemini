@@ -79,9 +79,9 @@
 		561594AF20DBFDD100515EA0 /* Gemini */ = {
 			isa = PBXGroup;
 			children = (
+				561594DB20DC0DFE00515EA0 /* Network */,
+				561594DA20DC0DF700515EA0 /* View Controllers */,
 				561594B020DBFDD100515EA0 /* AppDelegate.swift */,
-				561594D220DC086B00515EA0 /* LoginViewController.swift */,
-				561594D320DC086B00515EA0 /* LoginViewController.xib */,
 				561594B420DBFDD100515EA0 /* Main.storyboard */,
 				561594B720DBFDD200515EA0 /* Assets.xcassets */,
 				561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */,
@@ -97,6 +97,22 @@
 				561594C720DBFDD200515EA0 /* Info.plist */,
 			);
 			path = GeminiTests;
+			sourceTree = "<group>";
+		};
+		561594DA20DC0DF700515EA0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				561594D220DC086B00515EA0 /* LoginViewController.swift */,
+				561594D320DC086B00515EA0 /* LoginViewController.xib */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		561594DB20DC0DFE00515EA0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

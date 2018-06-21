@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var walletAddressTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,11 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signInWallet(_ sender: Any) {
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 
