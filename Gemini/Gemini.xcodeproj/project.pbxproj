@@ -16,6 +16,9 @@
 		561594C620DBFDD200515EA0 /* GeminiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561594C520DBFDD200515EA0 /* GeminiTests.swift */; };
 		561594D420DC086B00515EA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561594D220DC086B00515EA0 /* LoginViewController.swift */; };
 		561594D520DC086B00515EA0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561594D320DC086B00515EA0 /* LoginViewController.xib */; };
+		567C882120DC1167002FBBCE /* JobcoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882020DC1167002FBBCE /* JobcoinAPI.swift */; };
+		567C882320DC1277002FBBCE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882220DC1277002FBBCE /* Transaction.swift */; };
+		567C882520DC1C24002FBBCE /* JobcoinUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882420DC1C23002FBBCE /* JobcoinUrlRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		561594C720DBFDD200515EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		561594D220DC086B00515EA0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		561594D320DC086B00515EA0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		567C882020DC1167002FBBCE /* JobcoinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobcoinAPI.swift; sourceTree = "<group>"; };
+		567C882220DC1277002FBBCE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		567C882420DC1C23002FBBCE /* JobcoinUrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcoinUrlRequest.swift; sourceTree = "<group>"; };
 		650F08BFED2A8B3DEF77E93F /* Pods_GeminiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeminiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D6B351089B18C6FDA95E32 /* Pods-GeminiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeminiTests/Pods-GeminiTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7A68C482073D940E1216111 /* Pods-GeminiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeminiTests/Pods-GeminiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 				561594B720DBFDD200515EA0 /* Assets.xcassets */,
 				561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */,
 				561594BC20DBFDD200515EA0 /* Info.plist */,
+				567C882220DC1277002FBBCE /* Transaction.swift */,
 			);
 			path = Gemini;
 			sourceTree = "<group>";
@@ -123,6 +130,8 @@
 		561594DB20DC0DFE00515EA0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				567C882020DC1167002FBBCE /* JobcoinAPI.swift */,
+				567C882420DC1C23002FBBCE /* JobcoinUrlRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -358,6 +367,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				561594D420DC086B00515EA0 /* LoginViewController.swift in Sources */,
+				567C882120DC1167002FBBCE /* JobcoinAPI.swift in Sources */,
+				567C882320DC1277002FBBCE /* Transaction.swift in Sources */,
+				567C882520DC1C24002FBBCE /* JobcoinUrlRequest.swift in Sources */,
 				561594B120DBFDD100515EA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

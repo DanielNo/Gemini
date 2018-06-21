@@ -23,7 +23,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInWallet(_ sender: Any) {
-        
+        let address = walletAddressTextField.text!
+        print("sign in \(address)")
+        let api = JobcoinAPI()
+        api.login(walletAdddress: walletAddressTextField.text!)
         
     }
     
