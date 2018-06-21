@@ -6,6 +6,8 @@ target 'Gemini' do
   use_frameworks!
 
   # Pods for Gemini
+  pod 'Alamofire', '~> 4.7'
+  
 
   target 'GeminiTests' do
     inherit! :search_paths
