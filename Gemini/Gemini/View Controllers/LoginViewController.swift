@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var walletAddressTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,15 @@ class LoginViewController: UIViewController {
         let address = walletAddressTextField.text!
         print("sign in \(address)")
         let api = JobcoinAPI()
-        api.login(walletAdddress: walletAddressTextField.text!)
-        
+        api.login(walletAdddress: address) { [unowned self](data,responseCode) in
+            print(responseCode)
+            if (responseCode == ResponseCode.success){
+                let walletVC = WalletViewController(walletInfo: data)
+                self.navigationItem.title = "Logout"
+                self.navigationController?.pushViewController(walletVC, animated: true)
+            }
+            
+        }
     }
     
     /*

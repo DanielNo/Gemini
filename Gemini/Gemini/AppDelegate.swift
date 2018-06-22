@@ -49,8 +49,9 @@ extension AppDelegate{
     
     func presentLoginScreen(){
         let loginVC = LoginViewController()
+        let navController = UINavigationController(rootViewController: loginVC)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = loginVC
+        self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
     }
 

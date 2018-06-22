@@ -10,7 +10,7 @@ import Foundation
 
 public struct Transaction : Decodable{
     let timestamp : String
-    let fromAddress : String
+    let fromAddress : String?
     let toAddress : String
     let amount : String
 

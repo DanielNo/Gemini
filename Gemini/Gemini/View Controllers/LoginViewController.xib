@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Gemini" customModuleProvider="target">
             <connections>
+                <outlet property="signinBtn" destination="6hp-Xl-UEe" id="dzJ-hi-4mo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="walletAddressTextField" destination="FL3-aF-Bef" id="NOj-Xb-POD"/>
             </connections>

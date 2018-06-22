@@ -10,7 +10,6 @@
 		18B880AD7B296C10C4D176B2 /* Pods_GeminiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650F08BFED2A8B3DEF77E93F /* Pods_GeminiTests.framework */; };
 		340B13526B18FA73E5D7E869 /* Pods_Gemini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4966B110CF23F4916C4EDDE8 /* Pods_Gemini.framework */; };
 		561594B120DBFDD100515EA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561594B020DBFDD100515EA0 /* AppDelegate.swift */; };
-		561594B620DBFDD100515EA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561594B420DBFDD100515EA0 /* Main.storyboard */; };
 		561594B820DBFDD200515EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561594B720DBFDD200515EA0 /* Assets.xcassets */; };
 		561594BB20DBFDD200515EA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */; };
 		561594C620DBFDD200515EA0 /* GeminiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561594C520DBFDD200515EA0 /* GeminiTests.swift */; };
@@ -19,6 +18,9 @@
 		567C882120DC1167002FBBCE /* JobcoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882020DC1167002FBBCE /* JobcoinAPI.swift */; };
 		567C882320DC1277002FBBCE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882220DC1277002FBBCE /* Transaction.swift */; };
 		567C882520DC1C24002FBBCE /* JobcoinUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882420DC1C23002FBBCE /* JobcoinUrlRequest.swift */; };
+		567C882E20DD22EC002FBBCE /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882C20DD22EC002FBBCE /* WalletViewController.swift */; };
+		567C882F20DD22EC002FBBCE /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567C882D20DD22EC002FBBCE /* WalletViewController.xib */; };
+		567C883420DD3BC2002FBBCE /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C883320DD3BC2002FBBCE /* WalletInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 		4966B110CF23F4916C4EDDE8 /* Pods_Gemini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gemini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561594AD20DBFDD100515EA0 /* Gemini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gemini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561594B020DBFDD100515EA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		561594B520DBFDD100515EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		561594B720DBFDD200515EA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561594BA20DBFDD200515EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561594BC20DBFDD200515EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +49,9 @@
 		567C882020DC1167002FBBCE /* JobcoinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobcoinAPI.swift; sourceTree = "<group>"; };
 		567C882220DC1277002FBBCE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		567C882420DC1C23002FBBCE /* JobcoinUrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcoinUrlRequest.swift; sourceTree = "<group>"; };
+		567C882C20DD22EC002FBBCE /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		567C882D20DD22EC002FBBCE /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
+		567C883320DD3BC2002FBBCE /* WalletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
 		650F08BFED2A8B3DEF77E93F /* Pods_GeminiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeminiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D6B351089B18C6FDA95E32 /* Pods-GeminiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeminiTests/Pods-GeminiTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7A68C482073D940E1216111 /* Pods-GeminiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeminiTests/Pods-GeminiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,14 +101,13 @@
 		561594AF20DBFDD100515EA0 /* Gemini */ = {
 			isa = PBXGroup;
 			children = (
+				567C883020DD3AB4002FBBCE /* Model */,
 				561594DB20DC0DFE00515EA0 /* Network */,
 				561594DA20DC0DF700515EA0 /* View Controllers */,
 				561594B020DBFDD100515EA0 /* AppDelegate.swift */,
-				561594B420DBFDD100515EA0 /* Main.storyboard */,
 				561594B720DBFDD200515EA0 /* Assets.xcassets */,
 				561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */,
 				561594BC20DBFDD200515EA0 /* Info.plist */,
-				567C882220DC1277002FBBCE /* Transaction.swift */,
 			);
 			path = Gemini;
 			sourceTree = "<group>";
@@ -123,6 +126,8 @@
 			children = (
 				561594D220DC086B00515EA0 /* LoginViewController.swift */,
 				561594D320DC086B00515EA0 /* LoginViewController.xib */,
+				567C882C20DD22EC002FBBCE /* WalletViewController.swift */,
+				567C882D20DD22EC002FBBCE /* WalletViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -134,6 +139,15 @@
 				567C882420DC1C23002FBBCE /* JobcoinUrlRequest.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		567C883020DD3AB4002FBBCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				567C882220DC1277002FBBCE /* Transaction.swift */,
+				567C883320DD3BC2002FBBCE /* WalletInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5FB2E90DE0DBC7DB747B95FD /* Frameworks */ = {
@@ -244,9 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				561594D520DC086B00515EA0 /* LoginViewController.xib in Resources */,
+				567C882F20DD22EC002FBBCE /* WalletViewController.xib in Resources */,
 				561594BB20DBFDD200515EA0 /* LaunchScreen.storyboard in Resources */,
 				561594B820DBFDD200515EA0 /* Assets.xcassets in Resources */,
-				561594B620DBFDD100515EA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,11 +380,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567C883420DD3BC2002FBBCE /* WalletInfo.swift in Sources */,
 				561594D420DC086B00515EA0 /* LoginViewController.swift in Sources */,
 				567C882120DC1167002FBBCE /* JobcoinAPI.swift in Sources */,
 				567C882320DC1277002FBBCE /* Transaction.swift in Sources */,
 				567C882520DC1C24002FBBCE /* JobcoinUrlRequest.swift in Sources */,
 				561594B120DBFDD100515EA0 /* AppDelegate.swift in Sources */,
+				567C882E20DD22EC002FBBCE /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,14 +409,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		561594B420DBFDD100515EA0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				561594B520DBFDD100515EA0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

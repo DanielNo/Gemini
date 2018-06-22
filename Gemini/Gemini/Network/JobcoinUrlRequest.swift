@@ -76,7 +76,7 @@ public enum JobcoinUrlRequest : URLRequestConvertible {
         default :
             break
         }
-
+        print(urlReq)
         return urlReq
 
         
