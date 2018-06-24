@@ -7,9 +7,23 @@
 //
 
 import Foundation
+import RxSwift
 
 public struct Wallet : Decodable{
-    let balance : String
-    let transactions : [Transaction]
+    let balance : Variable<String>
+    let transactions : Variable<[Transaction]>
     
+    
+    private enum CodingKeys: CodingKey {
+        case balance
+        case transactions
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        balance = Variable<String>(try values.decode(String.self, forKey: CodingKeys.balance))
+        transactions = Variable<[Transaction]>(try values.decode([Transaction].self, forKey: CodingKeys.transactions))
+
+    }
+
 }

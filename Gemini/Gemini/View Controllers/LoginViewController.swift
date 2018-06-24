@@ -38,7 +38,9 @@ class LoginViewController: UIViewController {
                 guard let loggedInWallet = wallet else{
                  return
                 }
-                let walletVC = WalletViewController(walletAddress: address, wallet: loggedInWallet, api: self.api)
+                let walletViewModel = WalletVCViewModel(jobcoinAPI: self.api, address: address, wallet: loggedInWallet)
+//                let walletVC = WalletViewController(walletAddress: address, wallet: loggedInWallet, api: self.api)
+                let walletVC = WalletViewController(viewModel: walletViewModel)
                 self.navigationItem.title = "Logout"
                 self.navigationController?.pushViewController(walletVC, animated: true)
             }

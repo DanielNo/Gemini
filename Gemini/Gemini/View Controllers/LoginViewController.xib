@@ -33,7 +33,7 @@
                         <action selector="signInWallet:" destination="-1" eventType="touchUpInside" id="E5C-e6-RZV"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test1" borderStyle="roundedRect" placeholder="Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-aF-Bef">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test2" borderStyle="roundedRect" placeholder="Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-aF-Bef">
                     <rect key="frame" x="37.5" y="308" width="300" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Lt9-do-dfY"/>
