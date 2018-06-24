@@ -17,8 +17,8 @@ public enum ResponseCode : Int{
 
 public class JobcoinAPI{
     
-    func login(walletAdddress : String, completion: @escaping (WalletInfo?, ResponseCode) -> ()){
-        Alamofire.request(JobcoinUrlRequest.login(walletAddress: walletAdddress)).responseJSON(completionHandler: { (data) in
+    func login(walletAddress : String, completion: @escaping (Wallet?, ResponseCode) -> ()){
+        Alamofire.request(JobcoinUrlRequest.login(walletAddress: walletAddress)).responseJSON(completionHandler: { (data) in
             
             guard let statusCode = data.response?.statusCode else{
                 return
@@ -32,8 +32,8 @@ public class JobcoinAPI{
 //            print(data.result)
             if let jsonData = data.data{
                 do{
-                    let accInfo = try JSONDecoder().decode(WalletInfo.self, from: jsonData)
-                    completion(accInfo, responseCode)
+                    let wallet = try JSONDecoder().decode(Wallet.self, from: jsonData)
+                    completion(wallet, responseCode)
                 }catch{
                     completion(nil, responseCode)
                     print(error.localizedDescription)
@@ -49,19 +49,33 @@ public class JobcoinAPI{
         Alamofire.request(JobcoinUrlRequest.transactionViewAll()).responseJSON { (data) in
             print(data)
             print(data.response?.statusCode)
+            
+            
+
         }
 
     }
     
     // 200 = success
     // 422 = fail
-    func transactionSend(){
-        Alamofire.request(JobcoinUrlRequest.transactionSend(fromAddress: "test1", toAddress: "test2", amount: "1")).responseJSON { (data) in
+    func transactionSend(fromAddress : String, toAddress : String, amount : String, completion: @escaping (ResponseCode) -> ()){
+        Alamofire.request(JobcoinUrlRequest.transactionSend(fromAddress: fromAddress, toAddress: toAddress, amount: amount)).responseJSON { (data) in
             print(data)
             print(data.response?.statusCode)
+            guard let statusCode = data.response?.statusCode else{
+                return
+            }
+            guard let responseCode = ResponseCode(rawValue: statusCode) else{
+                return
+            }
+
+            completion(responseCode)
         }
 
     }
+    
 
+    
+    
 
 }

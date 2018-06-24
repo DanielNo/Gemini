@@ -48,7 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate{
     
     func presentLoginScreen(){
-        let loginVC = LoginViewController()
+        let jobcoinAPI = JobcoinAPI()
+        let loginVC = LoginViewController(jobcoinAPI: jobcoinAPI)
         let navController = UINavigationController(rootViewController: loginVC)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navController

@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var walletAddressTextField: UITextField!
+    var api : JobcoinAPI!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +23,22 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    convenience init(jobcoinAPI : JobcoinAPI) {
+        self.init()
+        self.api = jobcoinAPI
+    }
+    
     @IBAction func signInWallet(_ sender: Any) {
         let address = walletAddressTextField.text!
         print("sign in \(address)")
-        let api = JobcoinAPI()
-        api.login(walletAdddress: address) { [unowned self](data,responseCode) in
+        
+        api.login(walletAddress: address) { [unowned self](wallet,responseCode) in
             print(responseCode)
             if (responseCode == ResponseCode.success){
-                let walletVC = WalletViewController(walletInfo: data)
+                guard let loggedInWallet = wallet else{
+                 return
+                }
+                let walletVC = WalletViewController(walletAddress: address, wallet: loggedInWallet, api: self.api)
                 self.navigationItem.title = "Logout"
                 self.navigationController?.pushViewController(walletVC, animated: true)
             }
@@ -37,14 +46,5 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

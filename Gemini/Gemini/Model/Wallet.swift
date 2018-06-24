@@ -1,5 +1,5 @@
 //
-//  WalletInfo.swift
+//  Wallet.swift
 //  Gemini
 //
 //  Created by Daniel No on 6/22/18.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-public struct WalletInfo : Decodable{
+public struct Wallet : Decodable{
     let balance : String
     let transactions : [Transaction]
-
+    
 }
-

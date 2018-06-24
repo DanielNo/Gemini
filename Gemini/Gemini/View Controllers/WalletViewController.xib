@@ -63,12 +63,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient's Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6my-4m-DQt">
-                    <rect key="frame" x="97" y="83" width="262" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-Lc-85j">
                     <rect key="frame" x="97" y="131" width="100" height="30"/>
                     <constraints>
@@ -78,6 +72,19 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient's Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6my-4m-DQt">
+                    <rect key="frame" x="97" y="83" width="262" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bD-Es-eJF">
+                    <rect key="frame" x="137" y="187" width="101" height="30"/>
+                    <state key="normal" title="Send Jobcoins"/>
+                    <connections>
+                        <action selector="sendBtnPressed:" destination="-1" eventType="touchUpInside" id="gZn-4z-wFT"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -85,11 +92,13 @@
                 <constraint firstItem="Jmr-Wx-W3K" firstAttribute="top" secondItem="sp0-Ak-vZs" secondAttribute="bottom" constant="8" id="Dr6-VY-rHI"/>
                 <constraint firstItem="AOK-Lc-85j" firstAttribute="leading" secondItem="Jmr-Wx-W3K" secondAttribute="trailing" constant="8" id="HWY-5y-RR4"/>
                 <constraint firstItem="6my-4m-DQt" firstAttribute="top" secondItem="pJc-2B-vfc" secondAttribute="bottom" constant="13" id="JJh-2t-gxf"/>
+                <constraint firstItem="9bD-Es-eJF" firstAttribute="top" secondItem="AOK-Lc-85j" secondAttribute="bottom" constant="26" id="KGk-Yi-vwm"/>
                 <constraint firstItem="AOK-Lc-85j" firstAttribute="top" secondItem="6my-4m-DQt" secondAttribute="bottom" constant="18" id="Oi3-Kt-nBR"/>
                 <constraint firstItem="MvG-bd-48D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="PrV-IK-5q1"/>
                 <constraint firstItem="sp0-Ak-vZs" firstAttribute="top" secondItem="MvG-bd-48D" secondAttribute="bottom" constant="8" id="UeL-ci-Hzd"/>
                 <constraint firstItem="Jmr-Wx-W3K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="Xqa-Ey-cCm"/>
                 <constraint firstItem="sp0-Ak-vZs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="egN-PC-Zui"/>
+                <constraint firstItem="9bD-Es-eJF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hAb-bB-dkT"/>
                 <constraint firstItem="MvG-bd-48D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="hqk-Nv-899"/>
                 <constraint firstItem="pJc-2B-vfc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="v0C-MP-Nxq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6my-4m-DQt" secondAttribute="trailing" constant="16" id="vTj-y6-cSI"/>
