@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SwiftChart
 
 class WalletViewController: UIViewController {
     @IBOutlet weak var balanceLabel: UILabel!

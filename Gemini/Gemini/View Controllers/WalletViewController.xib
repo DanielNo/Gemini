@@ -85,16 +85,22 @@
                         <action selector="sendBtnPressed:" destination="-1" eventType="touchUpInside" id="gZn-4z-wFT"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ltr-iN-nwK" customClass="Chart" customModule="SwiftChart">
+                    <rect key="frame" x="10" y="238" width="355" height="408"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="pJc-2B-vfc" firstAttribute="leading" secondItem="MvG-bd-48D" secondAttribute="trailing" constant="8" id="7Ac-4p-Lzu"/>
+                <constraint firstItem="Ltr-iN-nwK" firstAttribute="top" secondItem="9bD-Es-eJF" secondAttribute="bottom" constant="21" id="CsR-Qb-gZm"/>
                 <constraint firstItem="Jmr-Wx-W3K" firstAttribute="top" secondItem="sp0-Ak-vZs" secondAttribute="bottom" constant="8" id="Dr6-VY-rHI"/>
                 <constraint firstItem="AOK-Lc-85j" firstAttribute="leading" secondItem="Jmr-Wx-W3K" secondAttribute="trailing" constant="8" id="HWY-5y-RR4"/>
                 <constraint firstItem="6my-4m-DQt" firstAttribute="top" secondItem="pJc-2B-vfc" secondAttribute="bottom" constant="13" id="JJh-2t-gxf"/>
                 <constraint firstItem="9bD-Es-eJF" firstAttribute="top" secondItem="AOK-Lc-85j" secondAttribute="bottom" constant="26" id="KGk-Yi-vwm"/>
                 <constraint firstItem="AOK-Lc-85j" firstAttribute="top" secondItem="6my-4m-DQt" secondAttribute="bottom" constant="18" id="Oi3-Kt-nBR"/>
                 <constraint firstItem="MvG-bd-48D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="PrV-IK-5q1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ltr-iN-nwK" secondAttribute="bottom" constant="21" id="PuE-74-DE9"/>
                 <constraint firstItem="sp0-Ak-vZs" firstAttribute="top" secondItem="MvG-bd-48D" secondAttribute="bottom" constant="8" id="UeL-ci-Hzd"/>
                 <constraint firstItem="Jmr-Wx-W3K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="Xqa-Ey-cCm"/>
                 <constraint firstItem="sp0-Ak-vZs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="egN-PC-Zui"/>
@@ -103,6 +109,8 @@
                 <constraint firstItem="pJc-2B-vfc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="v0C-MP-Nxq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6my-4m-DQt" secondAttribute="trailing" constant="16" id="vTj-y6-cSI"/>
                 <constraint firstItem="6my-4m-DQt" firstAttribute="leading" secondItem="sp0-Ak-vZs" secondAttribute="trailing" constant="8" id="w2T-8h-sMy"/>
+                <constraint firstItem="Ltr-iN-nwK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="wsW-RI-aky"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ltr-iN-nwK" secondAttribute="trailing" constant="10" id="xdU-xg-FNj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="31.5" y="74.5"/>
