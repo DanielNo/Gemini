@@ -17,12 +17,12 @@ class WalletViewController: UIViewController {
     @IBOutlet weak var recipientAddressTextField: UITextField!
     @IBOutlet weak var sendAmountTextField: UITextField!
     var api : JobcoinAPI?
-    var wallet : Wallet? {
+    private var wallet : Wallet? {
         didSet{
             balanceLabel.text = self.wallet?.balance
         }
     }
-    var walletAddress : String?
+    private var walletAddress : String?
     
     convenience init(walletAddress : String, wallet : Wallet, api : JobcoinAPI) {
         self.init()
