@@ -25,7 +25,7 @@ public class WalletVCViewModel{
     func sendCoinTransaction(fromAddress : String, toAddress : String, amount : String){
         
         self.api.transactionSend(fromAddress: fromAddress, toAddress: toAddress, amount: amount) { [unowned self](response) in
-            print("Send Transaction : \(ResponseCode)")
+            print("Send Transaction : \(response)")
             if(response == ResponseCode.success){
                 self.api.login(walletAddress: fromAddress, completion: { [unowned self](wallet, responseCode) in
                     self.refreshWallet(walletAddress: fromAddress)
@@ -38,7 +38,7 @@ public class WalletVCViewModel{
     
     func refreshWallet(walletAddress : String){
         self.api.login(walletAddress: walletAddress, completion: { [unowned self](wallet, responseCode) in
-            print("Load Wallet : \(ResponseCode)")
+            print("Load Wallet : \(responseCode)")
             if (responseCode == ResponseCode.success){
                 guard let newWallet = wallet else{
                  return
