@@ -21,6 +21,8 @@
 		567C882E20DD22EC002FBBCE /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C882C20DD22EC002FBBCE /* WalletViewController.swift */; };
 		567C882F20DD22EC002FBBCE /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567C882D20DD22EC002FBBCE /* WalletViewController.xib */; };
 		567C883620DD5E11002FBBCE /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C883520DD5E11002FBBCE /* Wallet.swift */; };
+		567C883C20DF4DB2002FBBCE /* WalletVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C883B20DF4DB2002FBBCE /* WalletVCViewModel.swift */; };
+		567C884120DF4DD8002FBBCE /* LoginVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C884020DF4DD8002FBBCE /* LoginVCViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		567C882C20DD22EC002FBBCE /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		567C882D20DD22EC002FBBCE /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
 		567C883520DD5E11002FBBCE /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		567C883B20DF4DB2002FBBCE /* WalletVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVCViewModel.swift; sourceTree = "<group>"; };
+		567C884020DF4DD8002FBBCE /* LoginVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCViewModel.swift; sourceTree = "<group>"; };
 		650F08BFED2A8B3DEF77E93F /* Pods_GeminiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeminiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D6B351089B18C6FDA95E32 /* Pods-GeminiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeminiTests/Pods-GeminiTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7A68C482073D940E1216111 /* Pods-GeminiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeminiTests/Pods-GeminiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				567C883020DD3AB4002FBBCE /* Model */,
 				561594DB20DC0DFE00515EA0 /* Network */,
 				561594DA20DC0DF700515EA0 /* View Controllers */,
+				567C883720DF4D61002FBBCE /* View Model */,
 				561594B020DBFDD100515EA0 /* AppDelegate.swift */,
 				561594B720DBFDD200515EA0 /* Assets.xcassets */,
 				561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */,
@@ -148,6 +153,15 @@
 				567C883520DD5E11002FBBCE /* Wallet.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		567C883720DF4D61002FBBCE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				567C884020DF4DD8002FBBCE /* LoginVCViewModel.swift */,
+				567C883B20DF4DB2002FBBCE /* WalletVCViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		5FB2E90DE0DBC7DB747B95FD /* Frameworks */ = {
@@ -380,6 +394,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567C884120DF4DD8002FBBCE /* LoginVCViewModel.swift in Sources */,
+				567C883C20DF4DB2002FBBCE /* WalletVCViewModel.swift in Sources */,
 				567C883620DD5E11002FBBCE /* Wallet.swift in Sources */,
 				561594D420DC086B00515EA0 /* LoginViewController.swift in Sources */,
 				567C882120DC1167002FBBCE /* JobcoinAPI.swift in Sources */,
