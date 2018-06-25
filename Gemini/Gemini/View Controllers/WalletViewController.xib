@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletViewController" customModule="Gemini" customModuleProvider="target">
             <connections>
+                <outlet property="balanceChart" destination="Ltr-iN-nwK" id="IQo-5y-vfH"/>
                 <outlet property="balanceLabel" destination="pJc-2B-vfc" id="2av-iq-II3"/>
                 <outlet property="recipientAddressTextField" destination="6my-4m-DQt" id="Icr-Hi-bmv"/>
                 <outlet property="sendAmountTextField" destination="AOK-Lc-85j" id="xL6-BL-cWS"/>
@@ -72,7 +73,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test1" borderStyle="roundedRect" placeholder="Recipient's Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6my-4m-DQt">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="data2" borderStyle="roundedRect" placeholder="Recipient's Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6my-4m-DQt">
                     <rect key="frame" x="97" y="83" width="262" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

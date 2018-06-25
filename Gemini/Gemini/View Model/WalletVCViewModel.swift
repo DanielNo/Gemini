@@ -11,12 +11,10 @@ import RxSwift
 
 public class WalletVCViewModel{
     let api : JobcoinAPI
-    let address : String
     let wallet: Variable<Wallet>
 
-    init(jobcoinAPI : JobcoinAPI, address : String, wallet : Wallet) {
+    init(jobcoinAPI : JobcoinAPI, wallet : Wallet) {
         self.api = jobcoinAPI
-        self.address = address
         self.wallet = Variable(wallet)
     }
     

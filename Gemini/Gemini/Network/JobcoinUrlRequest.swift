@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 fileprivate enum JobcoinDomain{
-    static let test = "http://jobcoin.gemini.com/plenty/api/"
+    static let testEnv = "http://jobcoin.gemini.com/plenty/api/"
     
 }
 
@@ -22,11 +22,11 @@ public enum JobcoinUrlRequest : URLRequestConvertible {
     var baseUrl : String{
         switch self {
         case .login:
-            return JobcoinDomain.test
+            return JobcoinDomain.testEnv
         case .transactionViewAll:
-            return JobcoinDomain.test
+            return JobcoinDomain.testEnv
         case .transactionSend:
-            return JobcoinDomain.test
+            return JobcoinDomain.testEnv
         }
     }
     

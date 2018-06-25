@@ -26,13 +26,11 @@ public class JobcoinAPI{
             guard let responseCode = ResponseCode(rawValue: statusCode) else{
                 return
             }
-            let error = data.error
-//            print(error)
-//            print(data.response?.statusCode)
-//            print(data.result)
             if let jsonData = data.data{
                 do{
-                    let wallet = try JSONDecoder().decode(Wallet.self, from: jsonData)
+                    var wallet = try JSONDecoder().decode(Wallet.self, from: jsonData)
+                    wallet.address = walletAddress
+                    try wallet.createBalanceHistory()
                     completion(wallet, responseCode)
                 }catch{
                     completion(nil, responseCode)
@@ -49,15 +47,10 @@ public class JobcoinAPI{
         Alamofire.request(JobcoinUrlRequest.transactionViewAll()).responseJSON { (data) in
             print(data)
             print(data.response?.statusCode)
-            
-            
-
         }
 
     }
     
-    // 200 = success
-    // 422 = fail
     func transactionSend(fromAddress : String, toAddress : String, amount : String, completion: @escaping (ResponseCode) -> ()){
         Alamofire.request(JobcoinUrlRequest.transactionSend(fromAddress: fromAddress, toAddress: toAddress, amount: amount)).responseJSON { (data) in
             print(data)

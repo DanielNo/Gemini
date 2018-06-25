@@ -14,5 +14,11 @@ public struct Transaction : Decodable{
     let toAddress : String
     let amount : String
 
+    func parsedTimestamp() -> Double{
+        let graphDate = DateFormatter.convertDateFormater(timestamp)
+        return graphDate
+    }
+    
+
 
 }

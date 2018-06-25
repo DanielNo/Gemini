@@ -15,9 +15,11 @@ class WalletViewController: UIViewController {
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var recipientAddressTextField: UITextField!
     @IBOutlet weak var sendAmountTextField: UITextField!
+    @IBOutlet weak var balanceChart: Chart!
+    
     let disposeBag = DisposeBag()
     var viewModel : WalletVCViewModel?
-    
+
     
     convenience init(viewModel : WalletVCViewModel) {
         self.init()
@@ -37,7 +39,7 @@ class WalletViewController: UIViewController {
     
     
     @IBAction func sendBtnPressed(_ sender: Any) {
-        guard let myAddress = self.viewModel?.address, let toAddress = recipientAddressTextField.text, let amount = sendAmountTextField.text  else{
+        guard let myAddress = self.viewModel?.wallet.value.address, let toAddress = recipientAddressTextField.text, let amount = sendAmountTextField.text  else{
             return
         }
 
@@ -53,18 +55,31 @@ class WalletViewController: UIViewController {
 }
 
 extension WalletViewController{
-    
     func bindUserInterface(){
         self.viewModel?.wallet
             .asObservable()
             .map { $0 }
             .bind(onNext: { (wallet) in
                 self.balanceLabel.text = wallet.balance.value
+                self.loadBalanceChart(fromWallet: wallet)
             })
             .disposed(by:self.disposeBag)
     }
     
-    
+    func loadBalanceChart(fromWallet : Wallet?){
+        guard let wallet = fromWallet else{
+            return
+        }
+        self.balanceChart.removeAllSeries()
+        var chartData = [Double]()
+        for balance in wallet.balanceHistory{
+            chartData.append(balance)
+        }
+        let series = ChartSeries(chartData)
+        series.color = ChartColors.blueColor()
+        series.area = true
+        balanceChart?.add(series)
+    }
 }
 
 extension WalletViewController{

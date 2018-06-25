@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+public class LoginVCViewModel{
+    let api : JobcoinAPI
+    
+    init(jobcoinAPI : JobcoinAPI) {
+        self.api = jobcoinAPI
+    }
+
+
+
+}
