@@ -61,6 +61,7 @@ extension WalletViewController{
             .map { $0 }
             .bind(onNext: { (wallet) in
                 self.balanceLabel.text = wallet.balance.value
+                self.navigationItem.title = "Wallet : \(wallet.address)"
                 self.loadBalanceChart(fromWallet: wallet)
             })
             .disposed(by:self.disposeBag)

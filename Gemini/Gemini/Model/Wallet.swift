@@ -52,8 +52,6 @@ public struct Wallet : Decodable{
         self.balanceHistory = balanceHistoryData
     }
     
-    
-    
     public enum DecodeError : Error{
         case noInitialBalance
         case invalidBalance

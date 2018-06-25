@@ -109,13 +109,12 @@
 		561594AF20DBFDD100515EA0 /* Gemini */ = {
 			isa = PBXGroup;
 			children = (
+				56BC869620E08B2D00208B81 /* Extensions */,
 				567C883020DD3AB4002FBBCE /* Model */,
 				561594DB20DC0DFE00515EA0 /* Network */,
 				561594DA20DC0DF700515EA0 /* View Controllers */,
 				567C883720DF4D61002FBBCE /* View Model */,
 				561594B020DBFDD100515EA0 /* AppDelegate.swift */,
-				567C886220E03C95002FBBCE /* DateFormatter+Jobcoin.swift */,
-				56E91D5620E04051003EF224 /* Double+Precision.swift */,
 				561594B720DBFDD200515EA0 /* Assets.xcassets */,
 				561594B920DBFDD200515EA0 /* LaunchScreen.storyboard */,
 				561594BC20DBFDD200515EA0 /* Info.plist */,
@@ -168,6 +167,15 @@
 				567C883B20DF4DB2002FBBCE /* WalletVCViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		56BC869620E08B2D00208B81 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				567C886220E03C95002FBBCE /* DateFormatter+Jobcoin.swift */,
+				56E91D5620E04051003EF224 /* Double+Precision.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5FB2E90DE0DBC7DB747B95FD /* Frameworks */ = {

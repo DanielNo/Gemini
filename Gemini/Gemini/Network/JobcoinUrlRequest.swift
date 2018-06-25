@@ -53,8 +53,17 @@ public enum JobcoinUrlRequest : URLRequestConvertible {
             return "transactions"
         }
     }
-
     
+    var parameters : [String : String]?{
+        switch self {
+        case .transactionSend(let fromAddress, let toAddress, let amount):
+            let parameters = ["fromAddress" : fromAddress, "toAddress" : toAddress, "amount" : amount]
+            return parameters
+        default:
+            return nil
+        }
+    }
+
     public func asURLRequest() throws -> URLRequest{
         let urlstr = baseUrl + path
         guard let url = try? urlstr.asURL() else{
@@ -63,23 +72,15 @@ public enum JobcoinUrlRequest : URLRequestConvertible {
         var urlReq = URLRequest(url: url)
         urlReq.httpMethod = self.method.rawValue
         urlReq.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        
-        switch self {
-        case .transactionSend(let fromAddress, let toAddress, let amount):
-            let parameters = ["fromAddress" : fromAddress, "toAddress" : toAddress, "amount" : amount]
-            
+        if parameters != nil {
             guard let data = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) else{
                 throw RequestError.invalidBodyParameters
             }
             urlReq.httpBody = data
-        default :
-            break
         }
+        
         print(urlReq)
         return urlReq
-
-        
     }
 
     enum RequestError : Error{
