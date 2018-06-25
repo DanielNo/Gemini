@@ -33,7 +33,7 @@
                         <action selector="signInWallet:" destination="-1" eventType="touchUpInside" id="E5C-e6-RZV"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="data1" borderStyle="roundedRect" placeholder="Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-aF-Bef">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wallet Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-aF-Bef">
                     <rect key="frame" x="37.5" y="308" width="300" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Lt9-do-dfY"/>
@@ -41,7 +41,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobcoin Wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6X-Ng-xdk">
                     <rect key="frame" x="37" y="71" width="300" height="100"/>
