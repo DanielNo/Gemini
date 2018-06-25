@@ -10,7 +10,7 @@ import Foundation
 
 extension DateFormatter{
 
-    //2018-06-21T16:18:48.231Z
+    //ISO 8601 to month.day 
     class func convertDateFormater(_ dateStr: String) -> Double
     {
         let dateFormatter = DateFormatter()
@@ -22,9 +22,7 @@ extension DateFormatter{
         let month = dateComponents[0]
         let day = dateComponents[1]
         let shortDateStr = "\(month).\(day)"
-//        let shortDateStr = "\(day)"
         let dateDouble = Double(shortDateStr)!.rounded(toPlaces: 2)
-//        print(dateDouble)
         return dateDouble
     }
 

@@ -49,7 +49,8 @@ extension AppDelegate{
     
     func presentLoginScreen(){
         let jobcoinAPI = JobcoinAPI()
-        let loginVC = LoginViewController(jobcoinAPI: jobcoinAPI)
+        let viewModel = LoginVCViewModel(jobcoinAPI: jobcoinAPI)
+        let loginVC = LoginViewController.init(viewModel: viewModel)
         let navController = UINavigationController(rootViewController: loginVC)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navController

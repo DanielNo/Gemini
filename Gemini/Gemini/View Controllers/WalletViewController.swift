@@ -18,7 +18,7 @@ class WalletViewController: UIViewController {
     @IBOutlet weak var balanceChart: Chart!
     
     let disposeBag = DisposeBag()
-    var viewModel : WalletVCViewModel?
+    var viewModel : WalletVCViewModel!
 
     
     convenience init(viewModel : WalletVCViewModel) {

@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var walletAddressTextField: UITextField!
-    var api : JobcoinAPI!
+    var viewModel : LoginVCViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,28 +23,28 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    convenience init(jobcoinAPI : JobcoinAPI) {
+    convenience init(viewModel : LoginVCViewModel) {
         self.init()
-        self.api = jobcoinAPI
+        self.viewModel = viewModel
     }
     
     @IBAction func signInWallet(_ sender: Any) {
         let address = walletAddressTextField.text!
         print("sign in \(address)")
-        
-        api.login(walletAddress: address) { [unowned self](wallet,responseCode) in
+        self.viewModel?.api.login(walletAddress: address) { [unowned self](wallet,responseCode) in
             print(responseCode)
             if (responseCode == ResponseCode.success){
                 guard let loggedInWallet = wallet else{
-                 return
+                    return
                 }
-                let walletViewModel = WalletVCViewModel(jobcoinAPI: self.api, wallet: loggedInWallet)
+                let walletViewModel = WalletVCViewModel(jobcoinAPI: self.viewModel.api, wallet: loggedInWallet)
                 let walletVC = WalletViewController(viewModel: walletViewModel)
                 self.navigationItem.title = "Logout"
                 self.navigationController?.pushViewController(walletVC, animated: true)
             }
             
         }
+
     }
     
 

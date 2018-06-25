@@ -18,10 +18,7 @@ public class WalletVCViewModel{
         self.wallet = Variable(wallet)
     }
     
-    
-    
     func sendCoinTransaction(fromAddress : String, toAddress : String, amount : String){
-        
         self.api.transactionSend(fromAddress: fromAddress, toAddress: toAddress, amount: amount) { [unowned self](response) in
             print("Send Transaction : \(response)")
             if(response == ResponseCode.success){
